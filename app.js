@@ -15,12 +15,9 @@ app.use(express.static(path.join(__dirname, 'public'))); //It will serve our sta
 
 //Default Index Route
 //We don't need to add backslash when rendering view pages
-app.get('/', (req, res) => {
-    res.send('Welcome to ML/AI Portal');
-});
 
 //Homepage Route
-app.get('/home', (req, res) => {
+app.get('/', (req, res) => {
     res.render('home/home.ejs');
 });
 
