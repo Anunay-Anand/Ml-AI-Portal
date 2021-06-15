@@ -1,4 +1,5 @@
 /* Css is working as color turns red */
 h1 {
     color: red;
+    background-color: violet;
 }
