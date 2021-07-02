@@ -2,14 +2,18 @@
 const express = require('express');
 const app = express();
 const path = require('path');
+const ejsMate = require('ejs-mate'); //ejsMate as extention of ejs
 const methodOverride = require('method-override');
 
 //Setting up the view engine and it's directory
+app.engine('ejs', ejsMate);
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
 //All Express middleware/ Static files
-app.use(express.urlencoded({extended: true}));  //req.body is parsed as a form
+app.use(express.urlencoded({
+    extended: true
+})); //req.body is parsed as a form
 app.use(methodOverride('_method')); //Setting the query for method-override
 app.use(express.static(path.join(__dirname, 'public'))); //It will serve our static files
 
@@ -21,6 +25,7 @@ app.get('/', (req, res) => {
 
 //Homepage Route
 app.get('/home', (req, res) => {
+    res.locals.title = 'Home';
     res.render('home/home.ejs');
 });
 
