@@ -1,0 +1,182 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    background-image: linear-gradient(300deg, #e6eaf0 0%, #f5f7fa 70%);
+}
+
+/* Universal hr tag edit */
+hr {
+    margin: 2%;
+}
+
+/* Header Animation */
+
+h1.header-animation {
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    color: #425066;
+}
+
+h1.header-animation:before,
+h1.header-animation:after {
+    content: '[';
+    display: inline-block;
+    position: relative;
+    top: 1px;
+    height: 100%;
+    font-size: 1.25em;
+    color: #FE8601;
+    transition: all 0.5s ease;
+}
+
+h1.header-animation:after {
+    content: ']';
+}
+
+h1.header-animation:hover:before {
+    transform: translateX(-5px);
+}
+
+h1.header-animation:hover:after {
+    transform: translateX(5px);
+}
+
+/* Cover Image */
+#cover-image {
+    background-image: url("/utilities/how-ai-ml-and-big-analytics-fits-into-a-non-tech-company.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 70vh;
+}
+
+/* Brand Logo */
+#brand-logo {
+    width: 20%;
+    height: 20%;
+}
+
+
+/* Navbar edit */
+.navbar-edit {
+    background-color: #021557;
+    transition: 0.5s;
+}
+
+/* Navbar Links */
+.mainNavLinks {
+    font-size: 1rem;
+    padding: 0.5rem 4rem;
+    color: #fff;
+    font-weight: 400;
+}
+
+/* Navbar toggler icon */
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,102,203, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.navbar-toggler {
+    border-color: #ff4500;
+}
+
+/* Per Link edit */
+.mainNavLinks a {
+    border-radius: 60px;
+    margin: 0 0.7rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Hover or Active */
+.mainNavLinks a:hover,
+.mainNavLinks .active {
+    background: linear-gradient(0deg, rgba(255, 151, 0, 1) 0%, rgba(251, 75, 2, 1) 100%);
+    color: rgba(255, 255, 255, 0.9);
+    transition: 0.2s;
+}
+
+/* Card stack (Mid page) */
+
+.learnobot-card,
+.learnobot-card a,
+#community-section {
+    color: #425066;
+}
+
+/* Arrow styles (card-link) */
+.learnobot-card a {
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.learnobot-card a:hover {
+    color: rgba(251, 75, 2, 1);
+}
+
+.learnobot-card a i {
+    transform: translateX(2px);
+}
+
+.learnobot-card a:hover i {
+    transform: translateX(6px);
+    transition: 0.5s;
+}
+
+#learnobot-card-img {
+    max-width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Client/Brand content and img */
+
+.client-img {
+    width: 10%;
+    height: 30%;
+}
+
+/* community section */
+
+#community-section {
+    cursor: pointer;
+}
+
+.community-card {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.community-card:hover {
+    color: #fff;
+    transition: 0.3s;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    background-color: rgba(251, 75, 2, 1);
+}
+
+#community-section h3 {
+    font-size: 1.2rem;
+}
+
+/* Media Query for navbar and WhyUs Heading */
+@media only screen and (max-width: 800px) {
+
+    body,
+    .mainNavLinks,
+    #community-section h3 {
+        font-size: 0.8rem;
+    }
+
+    /* Add color to navbar  */
+    #navbar {
+        background-color: #021557;
+    }
+
+    #whyUs-head {
+        font-size: 0.8rem;
+    }
+
+    #brand-logo {
+        width: 15%;
+        height: 15%;
+    }
+
+}

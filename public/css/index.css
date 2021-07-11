@@ -1,57 +1,38 @@
-* {
-    padding: 0;
-    margin: 0;
-    text-decoration: none;
-    list-style: none;
-
+body {
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    background-color: #ddd;
+    /*#AED6F1;*/
+    overflow-x: hidden;
+    /* Animation on body */
+    animation: fadeInAnimation ease 4s 1 forwards;
 }
 
-nav {
-    width: 100%;
-    height: 330px;
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 .img {
     background-image: url("/utilities/how-ai-ml-and-big-analytics-fits-into-a-non-tech-company.jpg");
-    background-size: 100%;
     background-repeat: no-repeat;
+    background-size: cover;
 }
 
-label.logo {
+.logo {
     color: #fff;
     font-size: 25px;
     line-height: 60px;
     font-weight: bold;
-    padding: 0 10px;
-    cursor: pointer;
-}
-
-nav ul {
-    float: right;
-    margin-right: 20px;
-}
-
-nav ul li {
-    display: inline-block;
-    margin: 0 15px;
-    line-height: 80px;
-
-}
-
-nav ul li a {
-    color: #fff;
-    font-size: 17px;
-    text-transform: uppercase;
-    padding: 7px 13px;
-    border-radius: 60px;
-    text-decoration: none;
-}
-
-#navhead.active,
-#navhead:hover {
-    background: linear-gradient(0deg, rgba(255, 151, 0, 1) 0%, rgba(251, 75, 2, 1) 100%);
-    color: #fff;
-    transition: .5s;
+    position: absolute;
+    left: 5rem;
+    top: 2%;
 }
 
 .checkbtn {
@@ -69,10 +50,10 @@ nav ul li a {
 }
 
 #slider {
-    width: 33%;
+    width: 25%;
     float: right;
-    margin-top: -265px;
-    margin-right: 20px;
+    margin-right: 2%;
+    transform: translateY(100%);
 }
 
 .box {
@@ -81,9 +62,8 @@ nav ul li a {
     width: 50%;
     padding: 20px;
     margin-left: 10px;
-    margin-top: 10px;
     background-color: #fff;
-
+    transform: translateY(260%);
 }
 
 #two,
@@ -137,6 +117,13 @@ nav ul li a {
     margin-right: 2%;
 }
 
+/* div .why {
+    overflow-wrap: break-word;
+    padding: 8% 30px;
+    position: relative;
+    word-wrap: break-word;
+} */
+
 h1.sixth {
     text-align: center;
     position: relative;
@@ -169,233 +156,220 @@ h1.sixth:hover:after {
 }
 
 .whyus {
-    margin-left: 300px;
-    margin-right: 300px;
     text-align: center;
+    padding-left: 25%;
+    padding-right: 25%;
 }
 
-body {
-    margin: 0 auto;
-    padding: 0px;
+h1 .contact_heading {
+    margin-bottom: 2%;
+}
+
+.contact_us {
+    margin-top: 2%;
+}
+
+.form-control {
+    width: 60%;
     text-align: center;
-    width: 100%;
-    font-family: "Myriad Pro", "Helvetica Neue", Helvetica, Arial, Sans-Serif;
-    background-color: #AED6F1;
+    margin: auto;
 }
 
-#wrapper {
-    margin: 0 auto;
-    padding: 0px;
+form .btn {
+    width: 60%;
     text-align: center;
-    width: 995px;
+    margin: auto;
 }
 
-#wrapper h1 {
-    margin-top: 50px;
-    font-size: 45px;
-    color: #1B4F72;
+.form-control:focus {
+    border-color: inherit;
+    -webkit-box-shadow: none;
+    box-shadow: none;
 }
 
-#wrapper h1 p {
-    font-size: 18px;
+
+.contact_us {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
-#contact_form_div {
-    width: 330px;
-    margin-left: 320px;
-    padding: 10px;
-    background-image: linear-gradient(135deg, #00B4DB 10%, #0083B0 100%);
+.contact-wrapper {
+    width: 70%;
+    min-height: 100%;
+    margin-left: 15%;
+    margin-right: 15%;
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 5%;
+    border-radius: 1%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    cursor: pointer;
 }
 
-#contact_form_div #contact_label {
-    margin: 15px;
-    margin-bottom: 30px;
-    font-size: 25px;
-    font-weight: bold;
-    color: white;
-
+.wrapper {
+    flex-wrap: wrap;
 }
 
-#contact_form_div input[type="text"] {
-    width: 230px;
-    height: 40px;
-    border-radius: 2px;
-    font-size: 17px;
-    padding-left: 5px;
-    border: none;
+.cntct-text {
+    border-right: 1.5px solid rgb(224, 221, 221);
+    padding-left: 4%;
+    width: 40% !important;
 }
 
-#contact_form_div textarea {
-    width: 230px;
-    height: 70px;
-    border-radius: 2px;
-    font-size: 17px;
-    padding: 5px;
-}
-
-#contact_form_div input[type="submit"] {
-    width: 230px;
-    height: 40px;
-    border: none;
-    border-radius: 2px;
-    font-size: 17px;
-    background: linear-gradient(0deg, rgba(255, 151, 0, 1) 0%, rgba(251, 75, 2, 1) 100%);
+.contact-wrapper:hover {
     color: #fff;
-    font-weight: bold;
+    transition: 0.7s;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    background-color: rgba(251, 75, 2, 1);
 }
 
-@media only screen and (min-width:700px) and (max-width:995px) {
-    #wrapper {
-        width: 100%;
-    }
-
-    #wrapper h1 {
-        font-size: 30px;
-    }
-
-    #contact_form_div {
-        width: 50%;
-        margin-left: 25%;
-        padding-left: 0px;
-        padding-right: 0px;
-    }
-
-    #contact_form_div input[type="text"] {
-        width: 80%;
-    }
-
-    #contact_form_div textarea {
-        width: 80%;
-    }
-
-    #contact_form_div input[type="submit"] {
-        width: 80%;
-    }
+.message h2,
+.message p {
+    margin-left: 3%;
 }
 
-@media only screen and (min-width:400px) and (max-width:699px) {
-    #wrapper {
-        width: 100%;
-    }
-
-    #wrapper h1 {
-        font-size: 30px;
-    }
-
-    #contact_form_div {
-        width: 60%;
-        margin-left: 20%;
-    }
-
-    #contact_form_div input[type="text"] {
-        width: 80%;
-    }
-
-    #contact_form_div textarea {
-        width: 80%;
-    }
-
-    #contact_form_div input[type="submit"] {
-        width: 80%;
-    }
+.follow h2,
+.social-links {
+    margin-left: 13%;
 }
 
-@media only screen and (min-width:100px) and (max-width:399px) {
-    #wrapper {
-        width: 100%;
-    }
-
-    #wrapper h1 {
-        font-size: 25px;
-    }
-
-    #contact_form_div {
-        width: 90%;
-        margin-left: 5%;
-        padding-left: 0px;
-        padding-right: 0px;
-    }
-
-    #contact_form_div input[type="text"] {
-        width: 80%;
-    }
-
-    #contact_form_div textarea {
-        width: 80%;
-    }
-
-    #contact_form_div input[type="submit"] {
-        width: 80%;
-    }
+/* Arrow styles (card-link) */
+#toAboutUs {
+    color: #425066;
+    text-decoration: none;
+    font-size: 1.1rem;
 }
 
-@media (max-width:1416px) {
-    .box {
-        width: 60%;
-        margin-top: -30px;
-    }
-
-    #slider {
-        margin-top: -268px;
-    }
+#toAboutUs:hover {
+    color: rgba(251, 75, 2, 1);
 }
 
-@media (max-width:952px) {
+#toAboutUs i {
+    transform: translateX(2px);
+}
+
+#toAboutUs:hover i {
+    transform: translateX(5px);
+    transition: 0.5s;
+}
+
+/* Card Image transform */
+
+.inner {
+    overflow: hidden;
+}
+
+.inner img:hover {
+    transform: scale(1.4);
+    transition: 1.5s;
+}
+
+/* Card transition */
+
+.card.card-animation {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.card.card-animation:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    transition: 0.5s;
+    transform: translateY(-10px);
+}
+
+.card.card-animation .card-body:hover {
+    background-color: rgba(251, 75, 2, 1);
+    color: #fff;
+    transition: 0.4s;
+}
+
+.card.card-animation .btn,
+.submit-btn,
+.submit-btn:hover {
+    background-color: #040B65;
+    color: #fff;
+}
+
+/* Jumbotron/Footer */
+#jumbotron {
+    min-width: 100%;
+    min-height: auto;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 3% 5%;
+}
+
+#jumbotron>.flex-item1 {
+    flex: 40%;
+}
+
+#jumbotron>.flex-item2,
+#jumbotron>.flex-item3,
+#jumbotron>.flex-item4 {
+    flex: 20%;
+}
+
+.flex-item2 ul,
+.flex-item3 ul {
+    padding-left: 0%;
+}
+
+.flex-item2 ul li,
+.flex-item3 ul li {
+    list-style: none;
+    padding-bottom: 3%;
+}
+
+.flex-item2 ul li a,
+.flex-item3 ul li a {
+    text-decoration: none;
+    color: rgb(42, 41, 41);
+}
+
+.flex-item4 p {
+    text-align: justify;
+}
+
+.jumbotron-heading {
+    color: rgb(27, 26, 26);
+}
+
+.social-media-links {
+    padding-left: 8.3%;
+}
+
+p.footer-paragraph {
+    width: 70%;
+    margin-top: 5%;
+    text-align: justify;
+    font-size: 16px;
+    padding-left: 8.3%;
+}
+
+/* Media Query for About Us intro */
+/* media queries for responsive layout */
+
+@media(max-width:952px) {
+
     #slider {
         margin-top: -210px;
         margin-right: 30px;
-    }
-
-    label.logo {
-        font-size: 30px;
-        padding: 10px;
-    }
-
-    nav ul li a {
-        font-size: 16px;
-
     }
 
     #box {
         font-size: auto;
         width: 60%;
         height: 20%;
-        margin-top: -76px;
         margin-right: 10px;
         padding: 1%;
+        text-overflow: ellipsis;
+        overflow: hidden;
     }
-}
 
-@media(max-width:952px) {
     .checkbtn {
         display: block;
-    }
-
-    ul {
-        position: fixed;
-        width: 100%;
-        height: 100vh;
-        background: linear-gradient(0deg, rgba(255, 151, 0, 1) 0%, rgba(251, 75, 2, 1) 100%);
-        top: 80px;
-        left: -100%;
-        text-align: center;
-        transition: all .5s;
-    }
-
-    nav ul li {
-        display: block;
-        margin: 50px 0;
-        line-height: 30px;
-
-    }
-
-    nav ul li a {
-        font-size: 20px;
-    }
-
-    #navhead.active,
-    #navhead:hover {
-        background: none;
     }
 
     #check:checked~ul {
@@ -403,26 +377,143 @@ body {
     }
 }
 
-@media (max-width:1120px) {
+
+@media only screen and (max-width:1460px) {
     .box {
         width: 60%;
-        margin-top: -80px;
+        margin-left: 2.5rem;
     }
 
     .cnt {
         padding: 1%;
     }
 
+    .img {
+        width: 100%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     #slider {
-        margin-top: -278px;
+        display: none;
+    }
+
+    div .logo {
+        font-size: 30px;
+        position: absolute;
+        left: 2rem;
+    }
+
+    div .why {
+        padding-top: 10rem;
+    }
+
+    .whyus {
+        text-align: center;
+        padding-left: 15%;
+        padding-right: 15%;
     }
 
 }
 
-@media(max-width:842) {
-    #box {
-        width: 100%;
-        height: auto;
-        padding: 1%;
+@media screen and (max-width:1250px) {
+    h1 .contact_heading {
+        padding-bottom: 0px;
+    }
+
+    div .cntc {
+        width: 100% !important;
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 5%;
+    }
+
+    div .cntct-text {
+        width: 100% !important;
+        margin-bottom: 3%;
+        border-right: 0px !important;
+    }
+
+    .cntc p {
+        display: inline;
+        text-align: justify;
+        padding-top: 0%;
+    }
+
+    .contact-wrapper {
+        margin-top: 10%;
+        width: 90%;
+        margin-left: 5.5% !important;
+        margin-right: 5% !important;
+    }
+
+    .follow h2,
+    .social-links {
+        margin-left: 18%;
+    }
+
+    form {
+        padding-left: auto;
+        padding-right: auto;
+    }
+
+    .jumbotron-heading-logo {
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (max-width:690px) {
+
+    #jumbotron>.flex-item1 {
+        flex: 100%;
+        padding-bottom: 5%;
+    }
+
+    #jumbotron>.flex-item2 {
+        flex: 50%;
+    }
+
+    #jumbotron>.flex-item3 {
+        flex: 50%;
+    }
+
+    #jumbotron>.flex-item4 {
+        flex: 100%;
+    }
+
+    .jumbotron-heading {
+        display: block;
+        padding-left: 22%;
+        padding-right: 22%;
+    }
+
+    .jumbotron-heading-logo {
+        padding-left: 7%;
+    }
+
+    .flex-item2 ul,
+    .flex-item3 ul {
+        padding-left: 40px;
+    }
+
+    .flex-item4 .jumbotron-heading {
+        padding-left: 35%;
+    }
+
+    .flex-item4 p {
+        padding-left: 2%;
+    }
+
+    .client-heading {
+        padding-bottom: 0% !important;
+    }
+
+    p.footer-paragraph {
+        width: 95%;
+    }
+
+    .footer-brand {
+        margin-left: 20%;
     }
 }
